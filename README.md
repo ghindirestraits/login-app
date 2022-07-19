@@ -1,4 +1,9 @@
+
 # Using Playwright for automated testing
+
+<h1 align="center">
+    <img src=".github/playwright-logo.svg" width="250px">
+</h1>
 
 This repo holds a minimal example of a test infrastructure using Playwright for automated testing. The application to be tested is a simple login form (in the web).
 
