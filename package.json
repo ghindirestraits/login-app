@@ -1,0 +1,11 @@
+{
+  "name": "login-app",
+  "version": "1.0.0",
+  "description": "Projeto de teste de aplicação tipo form de login explorando Playwright",
+  "main": "index.js",
+  "author": "Gabriel Heberle",
+  "license": "MIT",
+  "devDependencies": {
+    "@playwright/test": "^1.23.4"
+  }
+}
