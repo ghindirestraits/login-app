@@ -8,7 +8,8 @@ const config: PlaywrightTestConfig = {
   use: {
     headless: false,
     trace: 'on-first-retry',
-    screenshot: 'on'
+    screenshot: 'on',
+    video: 'on'
   },
   projects: [
     {
