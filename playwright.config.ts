@@ -2,11 +2,13 @@
 import { type PlaywrightTestConfig, devices } from '@playwright/test';
 
 const config: PlaywrightTestConfig = {
+  reporter: [['html', {outputFolder: 'report'}]],
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 2 : 0,
   use: {
     headless: false,
     trace: 'on-first-retry',
+    screenshot: 'on'
   },
   projects: [
     {
