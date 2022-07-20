@@ -1,9 +1,22 @@
-import { test, expect } from '@playwright/test';
+import { test } from '@playwright/test';
+import { LoginPage } from '../pages/login-page';
 
-test('basic test', async ({ page }) => {
-  await page.goto('https://login-app-qacademy.vercel.app/');
-  
-  const title = page.locator('.App-header p');
-  
-  await expect(title).toHaveText('Login');
+test('deve logar com sucesso', async ({ page }) => {
+
+    const loginPage: LoginPage = new LoginPage(page);
+
+    await loginPage.go();
+    await loginPage.signIn('qa', 'cademy');
+    await loginPage.userLoggedIn();
+
+});
+
+test('senha incorreta', async ({ page }) => {
+
+    const loginPage: LoginPage = new LoginPage(page);
+
+    await loginPage.go();
+    await loginPage.signIn('qa', 'abc123');
+    await loginPage.toastMessage('Oops! Credenciais inválidas :(');
+
 });
