@@ -26,7 +26,7 @@ export class LoginPage {
     }
 
     async toastMessage(target: string) {
-        const toastMessage = this.page.locator('div[role=status]');
+        const toastMessage = this.page.locator('.toast-message div[role=status]');
         await expect(toastMessage).toHaveText(target);
     }
 }

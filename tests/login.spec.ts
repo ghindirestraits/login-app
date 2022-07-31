@@ -16,6 +16,14 @@ test('deve logar com sucesso', async ({ page }) => {
 test('senha incorreta', async ({ page }) => {
     await loginPage.go();
     await loginPage.signIn('qa', 'abc123');
+
+    // técnica para garimpar html
+    // await page.waitForTimeout(1500);
+    // const contentPage = await page.content();
+
+    // const fs = require('fs');
+    // fs.writeFileSync('temp.html', contentPage);
+
     await loginPage.toastMessage('Oops! Credenciais inválidas :(');
 });
 
